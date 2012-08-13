@@ -39,10 +39,11 @@
 
             update();
 
-            $el.keyup(function() {
+            var changed = function() {
                 len = $el.val().length;
                 check();
-            });
+            }
+            $el.keyup(changed).change(changed);
         });
 
     }
