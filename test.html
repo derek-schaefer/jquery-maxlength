@@ -6,6 +6,7 @@
     <script type="text/javascript">
       $(function() {
         $('.test').maxlength({max:10});
+        $('#custom-status').maxlength({max:10, status:$('#custom-status').siblings('.status')});
       });
     </script>
   </head>
@@ -14,6 +15,12 @@
     <div><input type="text" class="test" /></div>
 
     <div><textarea class="test"></textarea></div>
+
+    <div>
+      <input id="custom-status" type="text" />
+      <input type="button" value="Add" />
+      <div class="status"></div>
+    </div>
 
   </body>
 </html>
